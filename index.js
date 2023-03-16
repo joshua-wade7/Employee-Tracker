@@ -108,6 +108,13 @@ const updateEmployeeRole = () => {
 };
 
 const viewAllRoles = () => {
+  db.query("SELECT * FROM role", (err, results) => {
+    if (err) {
+      throw err;
+    }
+    console.log("\n");
+    console.table(results);
+  });
   promptUser();
 };
 
