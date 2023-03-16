@@ -119,6 +119,25 @@ const viewAllRoles = () => {
 };
 
 const addRole = () => {
+  prompt[
+    ({
+      type: "input",
+      name: "title",
+      message: "What is the name of the title?",
+    },
+    {
+      type: "input",
+      name: "salary",
+      message: "How much is the salary?",
+    },
+    {
+      type: "input",
+      name: "department_id",
+      message: "What department will this title belong to?",
+      choices: ["Finance", "IT", "Research and Development"],
+    })
+  ];
+
   promptUser();
 };
 
