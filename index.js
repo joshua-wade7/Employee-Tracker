@@ -1,4 +1,4 @@
-const { prompt } = require("inquirer");
+const inquirer = require("inquirer");
 const cTable = require("console.table");
 const mysql = require("mysql2");
 
@@ -91,6 +91,11 @@ const promptUser = () => {
 };
 
 const viewAllEmployees = () => {
+  console.log("View all Employees Selected");
+  db.query("SELECT * FROM employee", (err, results) => {
+    err ? console.error(err) : console.log("\n");
+    console.table(results);
+  });
   promptUser();
 };
 
@@ -111,6 +116,13 @@ const addRole = () => {
 };
 
 const viewAllDepartments = () => {
+  db.query("SELECT * FROM department", (err, results) => {
+    if (err) {
+      throw err;
+    }
+    console.log("\n");
+    console.table(results);
+  });
   promptUser();
 };
 
@@ -118,4 +130,5 @@ const addDepartment = () => {
   promptUser();
 };
 
+promptUser();
 // continue to make consts for each case in the switch and call your inquirer prompt inside each
