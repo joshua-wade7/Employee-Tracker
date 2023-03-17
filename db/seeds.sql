@@ -13,10 +13,10 @@ VALUES ("Manager", 80000, 1),
        ("Engineer", 40000, 1);
        
 INSERT INTO employee (first_name, last_name, role_id, manager_id) 
-VALUES ("Curtis", "Anderson", 1, 1),
-	   ("Barry", "Bonds", 2, 3),
-       ("Brian", "Andereson", 3, 3),
-       ("Jacob", "Degrom", 4, 2),
-       ("Carlos", "Delgado", 5, 1),
-       ("Wander", "Franco", 6, 2),
-       ("Druw", "Jones", 7, 1);
+VALUES ("Curtis", "Anderson", 1, null), 
+	   ("Barry", "Bonds", 1, null), 
+       ("Brian", "Andereson", 2, null), 
+       ("Jacob", "Degrom", 3, 1), 
+       ("Carlos", "Delgado", 4, 2), 
+       ("Wander", "Franco", 4, 3), 
+       ("Druw", "Jones", 5, 3);
